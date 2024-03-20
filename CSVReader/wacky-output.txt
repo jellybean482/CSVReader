@@ -1,0 +1,39 @@
+=================Serial read
+{Item= lawn, care,     submitted=296,  re,imbursed=296, Encurred=296}
+{Item=apple, watch,     submitted=359.23,  re,imbursed=359.23, Encurred=359.23}
+{Item=Luant Landscaping,     submitted=800, Encurred=800}
+{Item=Total,     submitted=,  re,imbursed=655.23, Encurred=1455.23}
+{Item=Excess}
+{Item=desk top, Encurred=234.88}
+{Item=desk riser, Encurred=224.57}
+{}
+{Item=lawn care,     submitted=309.26,  re,imbursed=309.26, Encurred=309.26}
+{Item=TurboTax,     submitted=55.99, Encurred=55.99}
+{Item=sandisk,     submitted=79.99, Encurred=79.99}
+{Item=USBC charger, Encurred=10.62}
+{}
+{}
+{Item=Total,     submitted=,  re,imbursed=309.26, Encurred=455.86}
+{Item=Remaining,     submitted=,  re,imbursed=890.74, Encurred=744.14}
+
+=================Parallel read
+{Item= lawn, care,     submitted=296,  re,imbursed=296, Encurred=296}
+{Item=apple, watch,     submitted=359.23,  re,imbursed=359.23, Encurred=359.23}
+{Item=Luant Landscaping,     submitted=800, Encurred=800}
+{Item=Total,     submitted=,  re,imbursed=655.23, Encurred=1455.23}
+{Item=Excess}
+{Item=desk top, Encurred=234.88}
+{Item=desk riser, Encurred=224.57}
+{}
+{Item=lawn care,     submitted=309.26,  re,imbursed=309.26, Encurred=309.26}
+{Item=TurboTax,     submitted=55.99, Encurred=55.99}
+{Item=sandisk,     submitted=79.99, Encurred=79.99}
+{Item=USBC charger, Encurred=10.62}
+{}
+{}
+{Item=Total,     submitted=,  re,imbursed=309.26, Encurred=455.86}
+{Item=Remaining,     submitted=,  re,imbursed=890.74, Encurred=744.14}
+
+Performance measurements:
+Serial read execusion time used: 13 (ms)
+Parallel read execusion time used: 5 (ms)
