@@ -41,15 +41,9 @@ final public class CSVReader {
 
     public void read(String filePath, int method) throws IOException {
         File file = new File(filePath);
-        BufferedReader reader = null;
-        try {
-            reader = new BufferedReader(new FileReader(file));
-        } catch (FileNotFoundException e) {
-            System.out.println("File " + filePath + " can not be found.");
-            throw e;
-        }
 
-        try {
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+
             // read the header line
             String nameLine = reader.readLine();
             names = split(nameLine);
@@ -67,13 +61,14 @@ final public class CSVReader {
             default:
                 break;
             }
+        } catch (FileNotFoundException e) {
+            System.out.println("File " + filePath + " can not be found.");
+            throw e;
         } catch (IOException e) {
             System.out.println("Problem encountered reading file " + filePath);
             throw e;
-        } finally {
-            if (reader != null)
-                reader.close();
-        }
+        } 
+        
     }
 
     // Continue despite error
