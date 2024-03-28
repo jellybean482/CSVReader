@@ -51,3 +51,19 @@ Be prepared to:
 
 - Present your solution and walk through how you designed, implemented, and tested the program. During the technical interview, we may ask you to share your screen and show the program running.
 - Discuss any assumptions you made and challenges you encountered.
+
+### Key Dependencies
+
+- Java 17
+- JUnit 5
+- Eclipse 2024-03 (4.31.0)
+
+### Build the Project
+
+- Import the project into Eclipse IDE and build
+- Or, use javac from the command line
+
+### Run the Project
+
+- In Eclipse, run with "Program arguments": location of the CSV file
+- Or, from the command line, "java CSVReader <location of the CSV file>"
