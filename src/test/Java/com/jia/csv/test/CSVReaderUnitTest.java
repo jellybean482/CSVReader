@@ -54,7 +54,7 @@ public class CSVReaderUnitTest {
         String expected = "string";
         StringBuffer sb = new StringBuffer("   ");
         sb.append(expected);
-        Object actual = CSVReader.parseValue(expected);
+        Object actual = CSVReader.parseValue(sb.toString());
         assertTrue(actual instanceof String);
         Assert.assertEquals(expected, (String)actual);
     }
@@ -64,7 +64,7 @@ public class CSVReaderUnitTest {
         String expected = "string";
         StringBuffer sb = new StringBuffer(expected);
         sb.append("   ");
-        Object actual = CSVReader.parseValue(expected);
+        Object actual = CSVReader.parseValue(sb.toString());
         assertTrue(actual instanceof String);
         Assert.assertEquals(expected, (String)actual);
     }
@@ -97,5 +97,15 @@ public class CSVReaderUnitTest {
         double expected = 123.456;
         Double actual = CSVReader.parseDouble(String.valueOf(expected));
         Assert.assertEquals(expected, actual.doubleValue(), 0.001);
+    }
+    
+    @Test
+    public void parseStringLeadingSpaces() {
+        String expected = "string";
+        StringBuffer sb = new StringBuffer("   ");
+        sb.append(expected);
+        Object actual = CSVReader.parseString(sb.toString());
+        assertTrue(actual instanceof String);
+        Assert.assertEquals(expected, (String)actual);
     }
 }

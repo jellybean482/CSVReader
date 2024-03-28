@@ -129,6 +129,7 @@ final public class CSVReader {
     }
 
     public static String parseString(String s) {
+        s = s.trim();
         if (s.charAt(0) == '\"' && s.charAt(s.length() - 1) == '\"')
             s = s.substring(1, s.length() - 1);
         return s;
